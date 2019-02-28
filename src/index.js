@@ -1,8 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+//styles
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import './index.scss';
+//service
 import * as serviceWorker from './serviceWorker';
+
+import { ContentImageBlock } from './components/ContentImageBlock';
+
+class App extends React.Component {
+  render() {
+    return (
+      <div className="App">       
+        <ContentImageBlock />
+      </div>
+    );
+  }
+}
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
