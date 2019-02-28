@@ -8,6 +8,7 @@ import * as serviceWorker from './serviceWorker';
 
 import { ContentImageBlock } from './components/ContentImageBlock';
 
+
 class App extends React.Component {
   render() {
     return (
