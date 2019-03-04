@@ -1,9 +1,8 @@
 
 import React from 'react';
 import Modal from 'react-bootstrap/Modal';
-import Button from 'react-bootstrap/Button';
 
-export class Trigger extends React.Component{
+export default class Trigger extends React.Component{
     constructor(props){
         super(props);
         this.state = { show: props.modal };
@@ -26,8 +25,7 @@ export class Trigger extends React.Component{
         <Modal.Header closeButton>         
         </Modal.Header>
         <Modal.Body>
-          <h4>Image Model</h4>
-          
+                    
         </Modal.Body>
       </Modal>
       </div>

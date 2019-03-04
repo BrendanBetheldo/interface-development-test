@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 //styles
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+
 import './index.scss';
 //service
 import * as serviceWorker from './serviceWorker';

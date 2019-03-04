@@ -1,6 +1,7 @@
 import React from 'react';
 import './ContentImageBlock.scss';
-import { Trigger } from './Model';
+import Trigger from './Modal';
+import GalleryItem from './GalleryItem';
 
 export class ContentImageBlock extends React.Component {
      constructor(props) {
@@ -25,11 +26,11 @@ export class ContentImageBlock extends React.Component {
             <div className="container content-image-block">
                 <div className="row justify-content-center">
                     <div className="col-md-8 gallery-grid">                       
-                        <div onClick={() => this.openModel()} className="gallery-item item-1"></div>
+                        <div onClick={() => this.openModel()} className={this.props.className}></div>
                     
-                        <div onClick={this.handleClick}  className="gallery-item item-2"></div>
+                        <div onClick={() => this.openModel()}  className="gallery-item item-2"></div>
                     
-                        <div onClick={this.handleClick}  className="gallery-item item-3"></div>                        
+                        <div onClick={() => this.openModel()}  className="gallery-item item-3"></div>                        
                     </div>
                     <div className="col-md-4 content-column">
                         <div>

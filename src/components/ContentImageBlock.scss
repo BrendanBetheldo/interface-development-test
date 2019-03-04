@@ -1,78 +1,95 @@
-        .content-image-block {
-            max-width: 1200px;
-            .gallery-grid {
+@import "~bootstrap/scss/_functions.scss";
+@import "~bootstrap/scss/_variables.scss";
+@import "~bootstrap/scss/mixins/_breakpoints.scss";
+.content-image-block {
+    max-width: 1200px;
+    margin-top: 10%;
+    .gallery-grid {
+        width: 100%;
+        height: 620px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        .item-1 {
+            background-image: url('../assets/gallery-2.jpg');
+            vertical-align: middle;
+            flex: 100%;
+        }
+        .item-2 {
+            background-image: url('../assets/gallery-2.jpg');
+            vertical-align: middle;
+            flex: 25%;
+        }
+        .item-3 {
+            background-image: url('../assets/gallery-3.jpg');
+            vertical-align: middle;
+            flex: 25%;
+        }
+        .gallery-item {
+            display: block;
+            cursor: pointer;
+            background-size: cover;
+            background-position: center center;
+            position: relative;
+            background-repeat: no-repeat;
+            margin: 3px 6px;
+        }
+    }
+    .content-column {
+        height: auto;
+        color: #ffffff;
+        .title {
+            color: #FFFFFF;
+            font-family: "Open Sans";
+            font-size: 25px;
+            font-weight: 300;
+            letter-spacing: 0.5px;
+            line-height: 36px;
+            margin-bottom: 5px;
+            &:after {
+                content: ' ';
+                height: 1px;
+                max-width: 384px;
                 width: 100%;
-                height: 620px;
-                display: flex;
-                flex-wrap: wrap;
-                flex-direction: column;
-                .item-1 {
-                    background-image: url('../assets/gallery-2.jpg');
-                    width: 49%;
-                    height: 99%;
-                }
-                .item-2 {
-                    background-image: url('../assets/gallery-2.jpg');
-                    width: 49%;
-                    height: 49%;
-                }
-                .item-3 {
-                    background-image: url('../assets/gallery-3.jpg');
-                    width: 49%;
-                    height: 49%;
-                }
-                .gallery-item {
-                    display: block;
-                    cursor: pointer;
-                    background-size: cover;
-                    background-position: center center;
-                    position: relative;
-                    background-repeat: no-repeat;
-                    margin: 3px 6px;
-                }
-            }
-            .content-column {
-                height: auto;
-                color: #ffffff;
-                .title {
-                    color: #FFFFFF;
-                    font-family: "Open Sans";
-                    font-size: 25px;
-                    font-weight: 300;
-                    letter-spacing: 0.5px;
-                    line-height: 36px;
-                    margin-bottom: 5px;
-                    &:after {
-                        content: ' ';
-                        height: 1px;
-                        width: 384px;
-                        background-color: #FFFFFF;
-                        display: block;
-                    }
-                }
-                .main-copy {
-                    color: #FFFFFF;
-                    font-family: "Open Sans";
-                    font-size: 18px;
-                    font-weight: 300;
-                    line-height: 30px;
-                    margin-bottom: 13px;
-                    padding-bottom: 15px;
-                    height: auto;
-                }
-                .sub-title {
-                    font-family: "Open Sans";
-                    font-size: 16px;
-                    font-weight: 600;
-                    line-height: 28px;
-                    color: #CF1430;
-                }
-                .sub-copy {
-                    color: #FFFFFF;
-                    font-family: "Open Sans";
-                    font-size: 18px;
-                    font-weight: 600;
-                    line-height: 30px;
-                }
+                background-color: #FFFFFF;
+                display: block;
             }
         }
+        .main-copy {
+            color: #FFFFFF;
+            font-family: "Open Sans";
+            font-size: 18px;
+            font-weight: 300;
+            line-height: 30px;
+            margin-bottom: 13px;
+            padding-bottom: 15px;
+            height: auto;
+        }
+        .sub-title {
+            font-family: "Open Sans";
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 28px;
+            color: #CF1430;
+        }
+        .sub-copy {
+            color: #FFFFFF;
+            font-family: "Open Sans";
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 30px;
+        }
+    }
+}
+
+@include media-breakpoint-down(xs) {
+    .content-image-block {
+        .gallery-grid {
+            width: 100%;
+            height: 250px;
+        }
+        .gallery-grid-item {
+            margin: 0;
+        }
+    }
+}
